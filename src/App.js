@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { Landing } from "./components/Landing";
+import Landing from "./components/Routing/Landing";
 import { configStore } from "./state/store/configStore";
 
 function App() {
