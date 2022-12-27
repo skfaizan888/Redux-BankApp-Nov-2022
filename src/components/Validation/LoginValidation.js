@@ -1,10 +1,10 @@
 export const LoginValidation = (values) => {
     console.log("===", values)
     let error = {}
-    if (!values.username) {
-        error.username = "please enter username"
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.username)) {
-        error.username = "Enter valid email"
+    if (!values.email) {
+        error.email = "please enter email"
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+        error.email = "Enter valid email"
     } 
     if (!values.password) {
         error.password = "please enter password"
