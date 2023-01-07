@@ -45,6 +45,7 @@ app.post("/login", async (req, res) => {
         email
     } = req.body;
 
+    
     const result = await userModel.find(payload);
     if (result.length > 0) {
         const token = jsonwebtoken.sign({
@@ -60,6 +61,7 @@ app.post("/login", async (req, res) => {
     } else {
         res.json({
             msg: "please check user and password",
+
         });
     }
 });

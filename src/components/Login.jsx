@@ -28,10 +28,10 @@ export const Login = () => {
     // console.log("=====>>>", result.data);
     const result = await axios.post("http://localhost:2888/login", values);
     if (result.data.msg == "ok") {
+      localStorage.setItem("logintoken", result.data.token);
       navigate("/home");
     } else {
-      localStorage.setItem("logintoken", result.data.token);
-      setMsg(result.data.msg);
+      setMsg(result.data.msg); //error msg
     }
     e.preventDefault();
     setError(LoginValidation(values));

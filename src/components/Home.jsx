@@ -5,11 +5,11 @@ import { Grid, Button } from "@mui/material";
 const Home = () => {
   const navigate = useNavigate();
   const handleLoguot = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("logintoken");
     navigate("/");
   };
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("logintoken");
     //   if (token) {
     //     navigate("/home");
     //   }
